@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Piyush Kumar - Software Engineer / Full Stack Developer">
+<title>Piyush Kumar | Software Engineer</title>
+<style>
+:root{
+  --navy:#08243b;--navy2:#0c2d48;--blue:#1683d8;--lightblue:#8fd0ff;
+  --ink:#101820;--muted:#53606b;--line:#dfe4e8;--white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#eef1f3;line-height:1.5}
+a{text-decoration:none;color:inherit}
+.page{max-width:1400px;margin:0 auto;background:var(--white);min-height:100vh}
+.topbar{
+  height:72px;background:var(--navy);color:white;display:flex;align-items:center;
+  justify-content:space-between;padding:0 34px;position:sticky;top:0;z-index:20
+}
+.logo{font-size:22px;font-weight:800;letter-spacing:.02em}
+.logo span{color:#31a5ed}
+.nav{display:flex;align-items:center;gap:28px;font-size:13px;font-weight:700}
+.nav a:hover{color:var(--lightblue)}
+.download{
+  border:1px solid white;border-radius:14px;padding:10px 17px;display:inline-flex;
+  align-items:center;gap:8px;font-size:13px
+}
+.layout{display:grid;grid-template-columns:318px 1fr}
+.sidebar{background:linear-gradient(180deg,var(--navy2),#062039);color:white;padding:14px 20px 40px}
+.photo{
+  width:250px;height:303px;margin:0 auto 15px;overflow:hidden;background:#ddd;
+  border:3px solid white
+}
+.photo img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}
+.name{text-align:center;font-size:25px;font-weight:800;letter-spacing:.01em}
+.role{text-align:center;color:var(--lightblue);font-size:16px;margin-top:7px;line-height:1.45}
+.divider{height:1px;background:#6f91a8;margin:15px 0}
+.contact{display:grid;gap:10px;font-size:14px}
+.contact a{overflow-wrap:anywhere}
+.item{display:flex;gap:12px;align-items:flex-start}
+.icon{width:22px;text-align:center;font-size:17px;flex:none}
+.side-title{font-size:16px;font-weight:800;margin:14px 0 13px}
+.skill{margin:0 0 12px}
+.skill h4{font-size:14px;color:var(--lightblue);margin-bottom:2px}
+.skill p{font-size:13px;line-height:1.45;color:#fff}
+.main{padding:35px 42px 50px;background:white}
+.section{padding-bottom:30px;margin-bottom:30px;border-bottom:1px solid var(--line)}
+.section:last-child{border-bottom:0}
+.heading{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.badge{
+  width:38px;height:38px;border-radius:50%;background:var(--navy);color:white;
+  display:grid;place-items:center;font-size:17px;flex:none
+}
+h2{font-size:22px;color:#0a3155;letter-spacing:.01em}
+.about{font-size:14px;text-align:justify;max-width:930px}
+.job-head{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:start}
+.company{font-size:18px;color:#102f52;font-weight:800}
+.job-title{font-size:15px;color:#1467b3;margin-top:3px}
+.location{font-size:13px;margin-top:8px;color:#333}
+.date{font-size:13px;white-space:nowrap;margin-top:2px}
+ul{margin:10px 0 0 18px;font-size:13px}
+li{margin:6px 0;padding-left:2px}
+.education{display:grid;gap:20px;position:relative;margin-left:52px}
+.edu{position:relative;padding-left:22px}
+.edu:before{
+  content:"";position:absolute;left:-1px;top:4px;width:9px;height:9px;border:2px solid #174d7a;
+  border-radius:50%;background:white
+}
+.edu:not(:last-child):after{
+  content:"";position:absolute;left:3px;top:16px;width:2px;height:45px;background:#a9b9c6
+}
+.edu h3{font-size:15px;color:#102f52}
+.edu p{font-size:13px;margin-top:3px}
+.hobbies{display:grid;grid-template-columns:repeat(5,1fr);text-align:center;gap:0}
+.hobby{padding:4px 10px;border-right:1px solid var(--line)}
+.hobby:last-child{border-right:0}
+.hobby .emoji{display:block;font-size:25px;margin-bottom:5px}
+.hobby span:last-child{font-size:13px}
+footer{background:var(--navy);color:#dce7ef;text-align:center;padding:15px;font-size:12px}
+@media(max-width:900px){
+  .nav{gap:12px}.nav a{display:none}
+  .layout{grid-template-columns:1fr}.sidebar{padding-top:25px}
+  .photo{width:250px;height:303px}.main{padding:30px 22px}
+}
+@media(max-width:600px){
+  .topbar{padding:0 18px}.layout{display:block}
+  .job-head{grid-template-columns:1fr}.date{white-space:normal}
+  .hobbies{grid-template-columns:repeat(2,1fr);gap:12px}
+  .hobby{border-right:0}
+}
+@media print{
+  body{background:white}.page{max-width:none}
+  .topbar{position:static}.download{display:none}
+  .nav a{display:none}.main{padding:24px}
+  .sidebar{padding-top:10px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="topbar">
+  <div class="logo">PIYUSH <span>KUMAR</span></div>
+  <nav class="nav">
+    <a href="#about">ABOUT</a>
+    <a href="#experience">EXPERIENCE</a>
+    <a href="#skills">SKILLS</a>
+    <a href="#education">EDUCATION</a>
+    <a href="#certification">CERTIFICATION</a>
+    <a href="#hobbies">HOBBIES</a>
+    <a href="mailto:erpiyushmech@hotmail.com">CONTACT</a>
+    <a class="download" href="#" onclick="window.print();return false;">⇩ &nbsp;DOWNLOAD PDF</a>
+  </nav>
+</header>
+
+<div class="layout">
+<aside class="sidebar">
+  <div class="photo">
+    <img src="assets/profile.jpg" alt="Piyush Kumar">
+  </div>
+
+  <div class="name">PIYUSH KUMAR</div>
+  <div class="role">Software Engineer / Full Stack Developer<br>Banking &amp; FinTech</div>
+
+  <div class="divider"></div>
+  <div class="contact">
+    <div class="item"><span class="icon">⌖</span><span>Bangalore, India</span></div>
+    <div class="item"><span class="icon">☎</span><span>9934631611</span></div>
+    <div class="item"><span class="icon">✉</span><a href="mailto:erpiyushmech@hotmail.com">erpiyushmech@hotmail.com</a></div>
+    <div class="item"><span class="icon">in</span><a href="https://www.linkedin.com/in/piyush-kumar" target="https://www.linkedin.com/in/piyush-kumar3001/">linkedin.com/in/piyush-kumar</a></div>
+    <div class="item"><span class="icon">◉</span><a href="https://github.com/piyushkumar" target="https://github.com/ERSONUMECH/ERSONUMECH">github.com/piyushkumar</a></div>
+  </div>
+
+  <div class="divider"></div>
+  <div id="skills" class="side-title">TECHNICAL SKILLS</div>
+
+  <div class="skill"><h4>Languages</h4><p>Java, Kotlin, JavaScript</p></div>
+  <div class="skill"><h4>Frontend</h4><p>React.js, Redux, HTML5, CSS3</p></div>
+  <div class="skill"><h4>Backend</h4><p>Java, Kotlin, Spring Boot, Microservices, REST APIs, RESTful Services</p></div>
+  <div class="skill"><h4>Messaging &amp; Architecture</h4><p>Apache Kafka, Event-Driven Architecture, Service Orchestration, Asynchronous Communication, Distributed Systems</p></div>
+  <div class="skill"><h4>Databases</h4><p>MongoDB, SQL, Relational Databases</p></div>
+  <div class="skill"><h4>Testing</h4><p>JUnit, Cypress, Postman, Functional Testing, Integration Testing, End-to-End Testing, API Testing</p></div>
+  <div class="skill"><h4>DevOps &amp; CI/CD</h4><p>Docker, Kubernetes, Jenkins, Git</p></div>
+  <div class="skill"><h4>Monitoring &amp; Troubleshooting</h4><p>Kibana, Application Monitoring, Log Analysis, Production Troubleshooting</p></div>
+  <div class="skill"><h4>Engineering Practices</h4><p>API Integration, Debugging, Code Review, Defect Resolution, Agile/Scrum, Jira</p></div>
+  <div class="skill"><h4>Production Support</h4><p>Incident Management, Production Issue Resolution, Root Cause Analysis (RCA), Bug Fixing, Application Troubleshooting</p></div>
+  <div class="skill"><h4>DSA &amp; System Design</h4><p>Data Structures &amp; Algorithms (DSA), System Design, Scalability, Low-Level Design, High-Level Design, Performance Optimization</p></div>
+</aside>
+
+<main class="main">
+<section id="about" class="section">
+  <div class="heading"><div class="badge">●</div><h2>ABOUT ME</h2></div>
+  <p class="about">
+    Software Engineer / Full Stack Developer with 4+ years of experience in Banking and FinTech,
+    specializing in the development, enhancement, integration, and production support of digital
+    lending applications. Strong hands-on experience with Java, Kotlin, Spring Boot, React.js,
+    Microservices, Kafka, and modern cloud-native technologies. Skilled in building scalable,
+    event-driven, and customer-centric solutions across the entire application lifecycle.
+    Experienced in Home Loan and Personal Loan products, including Home Loan Top-Up and Personal
+    Loan features for Existing-to-Bank (ETB) customers. Adept at resolving production issues,
+    performing RCA, and delivering quality solutions within Agile/Scrum environments.
+  </p>
+</section>
+
+<section id="experience" class="section">
+  <div class="heading"><div class="badge">▣</div><h2>PROFESSIONAL EXPERIENCE</h2></div>
+  <div class="job-head">
+    <div>
+      <div class="company">AXIS BANK LIMITED</div>
+      <div class="job-title">Deputy Manager | Software Engineer / Full Stack Developer</div>
+      <div class="location">⌖ Bangalore</div>
+    </div>
+    <div class="date">▣ &nbsp; July 2022 – Present</div>
+  </div>
+  <ul>
+    <li>Develop and enhance end-to-end digital banking and lending features across frontend and backend applications using Java, Spring Boot, React.js, Redux, Microservices, REST APIs, Kafka, and Orchestrator.</li>
+    <li>Develop backend services using Java, Spring Boot, Kotlin, Microservices, and REST APIs, implementing business logic for digital lending workflows.</li>
+    <li>Work on Orchestrator services to manage business workflows and coordinate communication between multiple microservices.</li>
+    <li>Implement and integrate Apache Kafka for event-driven communication and asynchronous processing across distributed services.</li>
+    <li>Develop and enhance React.js and Redux frontend features and integrate REST APIs to support customer-facing banking functionality.</li>
+    <li>Work on Home Loan and Personal Loan products, including Home Loan Top-Up and Personal Loan features for Existing-to-Bank (ETB) customers.</li>
+    <li>Contribute to customer-facing applications and back-office/operations modules, supporting end-to-end business workflows.</li>
+    <li>Use MongoDB and SQL for application data analysis, validation, and production troubleshooting.</li>
+    <li>Develop and maintain JUnit test cases and perform functional, integration, and end-to-end testing to validate application quality.</li>
+    <li>Use Postman for REST API testing and Kibana for application log analysis, monitoring, debugging, and production issue investigation.</li>
+    <li>Work with Docker and Kubernetes for containerized application environments and application deployment/management.</li>
+    <li>Use Git for source code management and Jenkins as part of build and deployment processes.</li>
+    <li>Provide production support by analyzing incidents, troubleshooting defects, resolving urgent issues, and preparing Root Cause Analysis (RCA).</li>
+    <li>Collaborate with cross-functional teams to understand requirements, design technical solutions, troubleshoot issues, and deliver development stories within committed timelines.</li>
+    <li>Follow Agile/Scrum practices including daily stand-ups, Jira story updates, sprint activities, task tracking, progress reporting, and blocker communication.</li>
+  </ul>
+</section>
+
+<section id="education" class="section">
+  <div class="heading"><div class="badge">◆</div><h2>EDUCATION</h2></div>
+  <div class="education">
+    <div class="edu">
+      <h3>B.Tech in Mechanical Engineering</h3>
+      <p>Maulana Azad College of Engineering &amp; Technology, Magadh University</p>
+      <p>2010 – 2014</p>
+    </div>
+    <div class="edu">
+      <h3>Higher Secondary (12th) – CBSE (Private Candidate)</h3>
+      <p>2009 – 2010</p>
+    </div>
+    <div class="edu">
+      <h3>Secondary (10th) – CBSE</h3>
+      <p>DAV Public School</p>
+      <p>2006 – 2007</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="certification" class="section">
+  <div class="heading"><div class="badge">✓</div><h2>CERTIFICATION</h2></div>
+  <div class="edu">
+    <h3>Diploma in Advanced Computing (DAC)</h3>
+    <p><strong>Centre for Development of Advanced Computing (CDAC), Bangalore</strong></p>
+    <p>September 2021 – March 2022</p>
+  </div>
+</section>
+
+<section id="hobbies" class="section">
+  <div class="heading"><div class="badge">★</div><h2>HOBBIES &amp; INTERESTS</h2></div>
+  <div class="hobbies">
+    <div class="hobby"><span class="emoji">♟</span><span>Chess</span></div>
+    <div class="hobby"><span class="emoji">🏏</span><span>Cricket</span></div>
+    <div class="hobby"><span class="emoji">♫</span><span>Listening Music</span></div>
+    <div class="hobby"><span class="emoji">✈</span><span>Travelling</span></div>
+    <div class="hobby"><span class="emoji">📷</span><span>Photography</span></div>
+  </div>
+</section>
+</main>
+</div>
+
+<footer>© <span id="year"></span> Piyush Kumar · Software Engineer / Full Stack Developer · Banking &amp; FinTech</footer>
+</div>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body>
+</html>
